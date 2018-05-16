@@ -45,7 +45,7 @@ public class Scrati {
         if (scratiConfig.getOrg() == null || "".equals(scratiConfig.getOrg().trim())) {
             throw new ScratiException("400000", "机构号不能为空");
         }
-        if (scratiConfig.getAseKey() == null || "".equals(scratiConfig.getAseKey().trim())) {
+        if (scratiConfig.getAesKey() == null || "".equals(scratiConfig.getAesKey().trim())) {
             throw new ScratiException("400000", "AES密钥不能为空");
         }
         if (scratiConfig.getPartnerPrivateKey() == null ||
@@ -68,7 +68,7 @@ public class Scrati {
             if (debug) {
                 logger.info("< ScratiSdk Request Biz Data:\r\n" + reqJson + "\r\n");
             }
-            String encryptData = AESUtil.encryptToHex(this.scratiConfig.getAseKey(), reqJson);
+            String encryptData = AESUtil.encryptToHex(this.scratiConfig.getAesKey(), reqJson);
             Map<String, Object> request = new HashMap<>();
             request.put("org", this.scratiConfig.getOrg());
             request.put("method", method);
@@ -107,7 +107,7 @@ public class Scrati {
                 }
                 try {
                     String respJson = AESUtil.decryptFromHex(
-                            this.scratiConfig.getAseKey(), respJsonObj.getString("encryptData"));
+                            this.scratiConfig.getAesKey(), respJsonObj.getString("encryptData"));
                     if (debug) {
                         logger.info("< ScratiSdk Response Biz Data:\r\n" + respJson + "\r\n");
                     }

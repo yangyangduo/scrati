@@ -6,7 +6,7 @@ public class ScratiConfig {
     private String org;
 
     // 合作方 AES 密钥（平台分配）
-    private String aseKey;
+    private String aesKey;
 
     // 合作方私钥（合作方生成）
     private String partnerPrivateKey;
@@ -25,12 +25,12 @@ public class ScratiConfig {
         this.org = org;
     }
 
-    public String getAseKey() {
-        return aseKey;
+    public String getAesKey() {
+        return aesKey;
     }
 
-    public void setAseKey(String aseKey) {
-        this.aseKey = aseKey;
+    public void setAesKey(String aesKey) {
+        this.aesKey = aesKey;
     }
 
     public String getPartnerPrivateKey() {
