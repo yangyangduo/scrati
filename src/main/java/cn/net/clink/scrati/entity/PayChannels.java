@@ -20,7 +20,7 @@ public class PayChannels {
     public static final PayChannel QUICK_PAY = new PayChannel("快捷支付", "QUICK_PAY", 64, null, null);
     public static final PayChannel ADVANCE = new PayChannel("代付", "ADVANCE", 128, null, null);
     public static final PayChannel GATEWAY = new PayChannel("网关支付", "GATEWAY", 256, null, null);
-
+    public static final PayChannel UNION_ONLINE = new PayChannel("银联在线", "UNION_ONLINE", 512, null, null);
     public static PayChannel fromAuthCode(String authCode) {
         if (authCode != null && !"".equals(authCode)) {
             if (WEIXIN_PAY.checkPayCode(authCode)) return WEIXIN_PAY;
@@ -29,6 +29,7 @@ public class PayChannels {
             if (TEN_PAY.checkPayCode(authCode)) return TEN_PAY;
             if (BAIDU_WALLET.checkPayCode(authCode)) return BAIDU_WALLET;
             if (JD_PAY.checkPayCode(authCode)) return JD_PAY;
+            if (UNION_ONLINE.checkPayCode(authCode)) return UNION_ONLINE;
         }
         return null;
     }
@@ -54,6 +55,8 @@ public class PayChannels {
                 return ADVANCE;
             case "GATEWAY":
                 return GATEWAY;
+            case "UNION_ONLINE":
+                return UNION_ONLINE;
             default:
                 return null;
         }
@@ -80,6 +83,8 @@ public class PayChannels {
                 return ADVANCE;
             case 256:
                 return GATEWAY;
+            case 512:
+                return UNION_ONLINE;
             default:
                 return null;
         }

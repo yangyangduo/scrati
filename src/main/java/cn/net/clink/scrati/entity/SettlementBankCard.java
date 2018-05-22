@@ -4,13 +4,14 @@ public class SettlementBankCard {
 
     private String beneficiaryName;
     private String accountNumber;
-    private String bankName;
-    private String subBranchName;
-    private String headUnitedBankNumber;
-    private String unitedBankNumber;
     private String beneficiaryCertNo;
     private String bankCardMobile;
-    private String accountType;
+    private String unitedBankNumber;
+
+    // Read Only
+    private String headUnitedBankNumber;
+    private String bankName;
+    private String subBranchName;
     private String province;
     private String provinceName;
     private String city;
@@ -32,38 +33,6 @@ public class SettlementBankCard {
         this.accountNumber = accountNumber;
     }
 
-    public String getBankName() {
-        return bankName;
-    }
-
-    public void setBankName(String bankName) {
-        this.bankName = bankName;
-    }
-
-    public String getSubBranchName() {
-        return subBranchName;
-    }
-
-    public void setSubBranchName(String subBranchName) {
-        this.subBranchName = subBranchName;
-    }
-
-    public String getHeadUnitedBankNumber() {
-        return headUnitedBankNumber;
-    }
-
-    public void setHeadUnitedBankNumber(String headUnitedBankNumber) {
-        this.headUnitedBankNumber = headUnitedBankNumber;
-    }
-
-    public String getUnitedBankNumber() {
-        return unitedBankNumber;
-    }
-
-    public void setUnitedBankNumber(String unitedBankNumber) {
-        this.unitedBankNumber = unitedBankNumber;
-    }
-
     public String getBeneficiaryCertNo() {
         return beneficiaryCertNo;
     }
@@ -80,44 +49,40 @@ public class SettlementBankCard {
         this.bankCardMobile = bankCardMobile;
     }
 
-    public String getAccountType() {
-        return accountType;
+    public String getUnitedBankNumber() {
+        return unitedBankNumber;
     }
 
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
+    public void setUnitedBankNumber(String unitedBankNumber) {
+        this.unitedBankNumber = unitedBankNumber;
+    }
+
+    public String getHeadUnitedBankNumber() {
+        return headUnitedBankNumber;
+    }
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public String getSubBranchName() {
+        return subBranchName;
     }
 
     public String getProvince() {
         return province;
     }
 
-    public void setProvince(String province) {
-        this.province = province;
-    }
-
     public String getProvinceName() {
         return provinceName;
-    }
-
-    public void setProvinceName(String provinceName) {
-        this.provinceName = provinceName;
     }
 
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getCityName() {
         return cityName;
-    }
-
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
     }
 
 }
