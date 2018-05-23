@@ -47,4 +47,5 @@ public class IpAddressUtil {
 		if (wanIp != null && !"".equals(wanIp)) return wanIp;
 		return lanIp;
 	}
+
 }

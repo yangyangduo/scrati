@@ -39,18 +39,29 @@ public class Scrati {
 
     public <T extends ScratiCommonResp> T execute(String method
             , ScratiCommonReq scratiCommonReq, Class<T> clazz) throws ScratiException {
-        if (scratiConfig == null) {
+        if (this.scratiConfig == null) {
             throw new ScratiException("400000", "SDK参数未初始化");
         }
-        if (scratiConfig.getOrg() == null || "".equals(scratiConfig.getOrg().trim())) {
-            throw new ScratiException("400000", "机构号不能为空");
+        if (this.scratiConfig.getOrg() == null || "".equals(scratiConfig.getOrg().trim())) {
+            throw new ScratiException("400000", "合作方机构号不能为空");
         }
-        if (scratiConfig.getAesKey() == null || "".equals(scratiConfig.getAesKey().trim())) {
-            throw new ScratiException("400000", "AES密钥不能为空");
+        if (this.scratiConfig.getAesKey() == null || "".equals(scratiConfig.getAesKey().trim())) {
+            throw new ScratiException("400000", "合作方加解密密钥不能为空");
         }
-        if (scratiConfig.getPartnerPrivateKey() == null ||
-                "".equals(scratiConfig.getPartnerPrivateKey().trim())) {
-            throw new ScratiException("400000", "合作方私钥不能为空");
+        if (this.scratiConfig.getAesKey().length() != 16) {
+            throw new ScratiException("400000", "合作方加解密密钥长度错误");
+        }
+        if (this.scratiConfig.getPartnerPrivateKey() == null ||
+                "".equals(this.scratiConfig.getPartnerPrivateKey().trim())) {
+            throw new ScratiException("400000", "合作方签名私钥不能为空");
+        }
+        if (this.scratiConfig.getPlatformPublicKey() == null ||
+                "".equals(this.scratiConfig.getPlatformPublicKey().trim())) {
+            throw new ScratiException("400000", "平台方公钥不能为空");
+        }
+        if (this.scratiConfig.getGatewayUrl() == null ||
+                "".equals(this.scratiConfig.getGatewayUrl().trim())) {
+            throw new ScratiException("400000", "平台接入地址不能为空");
         }
         if (method == null || "".equals(method.trim())) {
             throw new ScratiException("400000", "方法服务名不能为空");
