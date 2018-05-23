@@ -4,12 +4,6 @@ import org.apache.log4j.Logger;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-/**
- *
- * Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download
- *
- * @http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
- */
 public class AESUtil {
 
     private static final Logger logger = Logger.getLogger(AESUtil.class);
