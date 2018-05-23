@@ -61,28 +61,56 @@ public class SettlementBankCard {
         return headUnitedBankNumber;
     }
 
+    public void setHeadUnitedBankNumber(String headUnitedBankNumber) {
+        this.headUnitedBankNumber = headUnitedBankNumber;
+    }
+
     public String getBankName() {
         return bankName;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
     }
 
     public String getSubBranchName() {
         return subBranchName;
     }
 
+    public void setSubBranchName(String subBranchName) {
+        this.subBranchName = subBranchName;
+    }
+
     public String getProvince() {
         return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
     }
 
     public String getProvinceName() {
         return provinceName;
     }
 
+    public void setProvinceName(String provinceName) {
+        this.provinceName = provinceName;
+    }
+
     public String getCity() {
         return city;
     }
 
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     public String getCityName() {
         return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 
 }
