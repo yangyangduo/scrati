@@ -2,11 +2,19 @@ package cn.net.clink.scrati.entity;
 
 public interface MchFeeType {
 
-    String CREDIT_D0 = "1";
-    String DEBIT_D0 = "2";
-    String CREDIT_T1 = "3";
-    String DEBIT_T1 = "4";
+    // 银行卡
+    String BANK_CARD = "1";
 
+    // 微信支付
+    String WEIXIN_PAY = "5";
+    // 支付宝
+    String ALI_PAY = "6";
+    // QQ钱包
+    String TEN_PAY = "9";
+    // 银联钱包
+    String UNION_PAY = "10";
+
+    // 代付
     String ADVANCE = "20";
 
 }
