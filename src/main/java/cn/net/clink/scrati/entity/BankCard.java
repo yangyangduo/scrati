@@ -16,6 +16,10 @@ public class BankCard extends ScratiCommonReq {
     private String cvv2;
     private String validThru;
 
+    private String bankCode;
+    private String unitedBankNo;
+    private String headUnitedBankNo;
+
     public String getName() {
         return name;
     }
@@ -80,4 +84,27 @@ public class BankCard extends ScratiCommonReq {
         this.validThru = validThru;
     }
 
+    public String getBankCode() {
+        return bankCode;
+    }
+
+    public void setBankCode(String bankCode) {
+        this.bankCode = bankCode;
+    }
+
+    public String getUnitedBankNo() {
+        return unitedBankNo;
+    }
+
+    public void setUnitedBankNo(String unitedBankNo) {
+        this.unitedBankNo = unitedBankNo;
+    }
+
+    public String getHeadUnitedBankNo() {
+        return headUnitedBankNo;
+    }
+
+    public void setHeadUnitedBankNo(String headUnitedBankNo) {
+        this.headUnitedBankNo = headUnitedBankNo;
+    }
 }

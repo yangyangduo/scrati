@@ -1,29 +1,34 @@
 package cn.net.clink.scrati.entity;
 
-public class QuickpayOrder extends ScratiCommonResp {
+public class GatewayOrder extends ScratiCommonResp {
 
     private Long id;
     private String mchId;
     private String prodId;
-    private String title;
-    private String body;
     private String orderId;
     private String feeType;
     private Long totalAmount;
+    private Long settlementAmount;
+    private String settlementPeriod;
+    private String title;
+    private String body;
+    private String detail;
+    private String attach;
+    private String remark;
+    private String ipAddress;
+
     private String tradeState;
     private Long actualPayAmount;
     private Long refundableAmount;
-    private Long settlementAmount;
-    private String settlementPeriod;
     private String endDate;
     private String endTime;
-    private String ipAddress;
 
     // 支付卡信息
-    private String bankCardNo;
-    private String bankCardType;
+    private String bankType;
     private String bankCode;
     private String bankName;
+    private String bankCardType;
+    private String bankCardNo;
 
     private String createDate;
     private String createTime;
@@ -52,22 +57,6 @@ public class QuickpayOrder extends ScratiCommonResp {
         this.prodId = prodId;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
     public String getOrderId() {
         return orderId;
     }
@@ -90,6 +79,70 @@ public class QuickpayOrder extends ScratiCommonResp {
 
     public void setTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    public Long getSettlementAmount() {
+        return settlementAmount;
+    }
+
+    public void setSettlementAmount(Long settlementAmount) {
+        this.settlementAmount = settlementAmount;
+    }
+
+    public String getSettlementPeriod() {
+        return settlementPeriod;
+    }
+
+    public void setSettlementPeriod(String settlementPeriod) {
+        this.settlementPeriod = settlementPeriod;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public String getAttach() {
+        return attach;
+    }
+
+    public void setAttach(String attach) {
+        this.attach = attach;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
     }
 
     public String getTradeState() {
@@ -116,22 +169,6 @@ public class QuickpayOrder extends ScratiCommonResp {
         this.refundableAmount = refundableAmount;
     }
 
-    public Long getSettlementAmount() {
-        return settlementAmount;
-    }
-
-    public void setSettlementAmount(Long settlementAmount) {
-        this.settlementAmount = settlementAmount;
-    }
-
-    public String getSettlementPeriod() {
-        return settlementPeriod;
-    }
-
-    public void setSettlementPeriod(String settlementPeriod) {
-        this.settlementPeriod = settlementPeriod;
-    }
-
     public String getEndDate() {
         return endDate;
     }
@@ -148,28 +185,12 @@ public class QuickpayOrder extends ScratiCommonResp {
         this.endTime = endTime;
     }
 
-    public String getIpAddress() {
-        return ipAddress;
+    public String getBankType() {
+        return bankType;
     }
 
-    public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
-    }
-
-    public String getBankCardNo() {
-        return bankCardNo;
-    }
-
-    public void setBankCardNo(String bankCardNo) {
-        this.bankCardNo = bankCardNo;
-    }
-
-    public String getBankCardType() {
-        return bankCardType;
-    }
-
-    public void setBankCardType(String bankCardType) {
-        this.bankCardType = bankCardType;
+    public void setBankType(String bankType) {
+        this.bankType = bankType;
     }
 
     public String getBankCode() {
@@ -186,6 +207,22 @@ public class QuickpayOrder extends ScratiCommonResp {
 
     public void setBankName(String bankName) {
         this.bankName = bankName;
+    }
+
+    public String getBankCardType() {
+        return bankCardType;
+    }
+
+    public void setBankCardType(String bankCardType) {
+        this.bankCardType = bankCardType;
+    }
+
+    public String getBankCardNo() {
+        return bankCardNo;
+    }
+
+    public void setBankCardNo(String bankCardNo) {
+        this.bankCardNo = bankCardNo;
     }
 
     public String getCreateDate() {

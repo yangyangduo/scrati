@@ -5,6 +5,7 @@ public class IndividualMchBase {
     private String mchId;
     private String outId;
     private String name;
+    private String legalPersonName;
     private String certType;
     private String certNo;
     private String mobile;
@@ -13,6 +14,7 @@ public class IndividualMchBase {
     private String city;
     private String cityName;
     private String district;
+    private String districtName;
     private String address;
     private String registrationIp;
 
@@ -38,6 +40,14 @@ public class IndividualMchBase {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLegalPersonName() {
+        return legalPersonName;
+    }
+
+    public void setLegalPersonName(String legalPersonName) {
+        this.legalPersonName = legalPersonName;
     }
 
     public String getCertType() {
@@ -102,6 +112,14 @@ public class IndividualMchBase {
 
     public void setDistrict(String district) {
         this.district = district;
+    }
+
+    public String getDistrictName() {
+        return districtName;
+    }
+
+    public void setDistrictName(String districtName) {
+        this.districtName = districtName;
     }
 
     public String getAddress() {

@@ -124,7 +124,7 @@ public class Scrati {
                     }
                     return JSON.parseObject(respJson, clazz);
                 } catch (Throwable th) {
-                    logger.info("< ScratiSdk Response:\r\n" + respStr + "\r\n");
+                    logger.info("< ScratiSdk Response:\r\n" + respStr + "\r\n", th);
                     throw new ScratiException("999999", "返回报文解密失败", th);
                 }
             } else {

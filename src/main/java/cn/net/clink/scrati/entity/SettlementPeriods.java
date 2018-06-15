@@ -6,6 +6,12 @@ public class SettlementPeriods {
     public static final String T1 = "T1";
     public static final String D0 = "D0";
     public static final String D1 = "D1";
+    public static final String T2 = "T2";
+    public static final String T3 = "T3";
+    public static final String T4 = "T4";
+    public static final String T5 = "T5";
+    public static final String T6 = "T6";
+    public static final String T7 = "T7";
 
     public static boolean isD0(String period) {
         return D0.equals(period);

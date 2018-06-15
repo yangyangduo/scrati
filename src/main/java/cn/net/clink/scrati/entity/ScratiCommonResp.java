@@ -3,9 +3,11 @@ package cn.net.clink.scrati.entity;
 public class ScratiCommonResp {
 
     private String orgNo;
+
     private String resultCode;
     private String errorCode;
     private String errorCodeDes;
+
     private String errorMsg;
 
     public String getOrgNo() {
